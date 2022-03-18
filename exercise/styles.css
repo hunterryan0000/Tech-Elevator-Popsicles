@@ -11,6 +11,47 @@ body {
     margin: 5px 20px 20px 20px;
 }
 
+#contact{
+    grid-template-areas: "nav nav" "main main" "main main" "footer footer";
+
+}
+
+#contactmain{
+    display: flex;
+    flex-direction: column;
+
+}
+
+main form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form select {
+    width: 310px;
+    margin-bottom: 12px;
+}
+
+form textarea{
+    margin-bottom: 12px;
+    width: 400px;
+}
+
+#submit {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: #00afef;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    border-style: none;
+}
+
+
+
 nav { grid-area: nav;}
 main {grid-area: main;}
 .race {grid-area: race;}
@@ -139,3 +180,49 @@ footer {
     text-align: center;
     text-transform: uppercase;
 }
+
+@media screen and (max-width: 800px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul li{
+        line-height: 25px;
+        margin-top: 20px;
+    }
+
+    main form input, main form textarea, main form select{
+        width: 100%;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    main img {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    section.race{
+        display: block;
+    }
+
+    section.race div p {
+        display: inline-block;
+        position: relative;
+        bottom: 0;
+    }
+
+    section.race img {
+        float: left;
+    }
+    
+
+}
+
+

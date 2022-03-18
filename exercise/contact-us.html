@@ -4,9 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <title>Popsicle</title>
 </head>
-<body>
-    <h1>Contac Us</h1>
+<body id ="contact">
+    <nav>
+        <header>
+            <img src="./images/te-pops.png" alt="Pop">
+            <h1>Tech Elevator Popsicles</h1>
+        </header>
+        <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="">STORE</a></li>
+            <li><a href="./contact-us.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+
+    <main id ="contactmain">
+    
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" name="name" id="name"><br>
+                <label for="Popsicle Monthly">How did you hear about us?</label><br>
+                <select name="Popsicle Monthly" id="Popsicle Monthly">
+                    <option value="Popsicle Monthly">Popsicle Monthly</option>
+                </select><br>
+                <label for="favorite">What color is your favorite popsicle?</label><br>
+                <input type="color" name="favorite" id="favorite" value="#87ceeb"><br>
+                <label for="comments">Please let us know any comments you have:</label><br>
+                <textarea name="comments" id="comments" cols="10" rows="15"></textarea><br>
+                <input type="Submit" id="submit"></input>
+            </form>
+        
+    </main>
+    <footer>
+        <p>© Tech Elevator 2020</p>
+    </footer>
 </body>
 </html>
