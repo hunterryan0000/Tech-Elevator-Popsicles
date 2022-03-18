@@ -1,20 +1,63 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #87CEEB;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px 50% 30% 8%;
+    column-gap: 5px;
+    row-gap: 5px;
+    grid-template-areas: "nav nav" "main main" "race summer" "footer footer";
+    height: 95vh;
+    margin: 5px 20px 20px 20px;
+}
+
+nav { grid-area: nav;}
+main {grid-area: main;}
+.race {grid-area: race;}
+.summer {grid-area: summer;}
+footer {grid-area: footer;}
+
+nav {
+    display: flex; 
+    
 }
 
 nav ul {
     margin: 0;
-    padding: 20px 0 0 0;
+    padding: 0 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+
+    
+}
+nav header {
+    flex-grow: 1;
+    display: flex;
+}
+
+nav header h1 {
+    font-size: 30px;
+    font-weight: bold;
+    align-self: center;
 }
 
 nav ul li {
+
     list-style: none;
     width: 30%;
     background-color: #00afef;
     border-radius: 5px;
     text-align: center;
-    line-height: 50px;
+    line-height: 50px; 
+    color: black;
+    font-weight: bold;
+
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
 }
 
 header img {
@@ -26,12 +69,38 @@ header h1 {
     padding-top: 10px;
 }
 
+main div {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+main li{
+    list-style: none;
+}
+
+main{
+    display: flex;
+}
+
 main img {
     object-fit: cover;
     margin-right: 20px;
     height: 350px;
     width: 35%;
+    align-self: center;
 }
+
+section.race {
+    display: flex;
+    text-align: center;
+}
+
+section.race div p {
+    margin-top: 10%;
+    text-align: left;
+}
+
+
 
 main li:before {
     content: '🍡';
@@ -39,10 +108,25 @@ main li:before {
     padding-right: 8px;
 }
 
-main, section, footer {
+main, section {
     background-color: #ffffff;
     border-radius: 5px;
     padding: 20px;
+}
+
+section.summer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .store-button { /* used for store link in "Get refreshed" section */
